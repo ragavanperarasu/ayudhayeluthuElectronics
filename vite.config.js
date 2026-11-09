@@ -1,12 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import seoPlugin from './seo-plugin.js';
+import { SITE } from './src/config.js';
 
-// The site uses clean page addresses (/category/ethical-hacking) so Google can
-// index every page. Host it at the root of a domain; hosting rules for
-// Netlify (public/_redirects), Apache/cPanel/Hostinger (public/.htaccess),
-// Vercel (vercel.json) and GitHub Pages (404.html) are included.
+// The folder the site is served from comes from SITE.siteUrl in src/config.js:
+//   https://ragavanperarasu.github.io/ayudhayeluthuElectronics  →  /ayudhayeluthuElectronics/
+//   https://www.yourdomain.com                                  →  /
+const base = SITE.siteUrl ? new URL(SITE.siteUrl).pathname.replace(/\/*$/, '/') : '/';
+
 export default defineConfig({
   plugins: [react(), seoPlugin()],
-  base: '/',
+  base,
 });

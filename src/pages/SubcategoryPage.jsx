@@ -11,6 +11,7 @@ import NotFoundPage from './NotFoundPage';
 import { findCategory, findSubcategory } from '../data/categories';
 import { productsIn } from '../data/products';
 import usePageMeta, { absUrl, breadcrumbLd } from '../seo/usePageMeta';
+import { canonicalPath, subcategoryMeta } from '../seo/pageMeta';
 import WhatsAppButton from '../components/WhatsAppButton';
 import { openWhatsApp, subcategoryRequestMessage } from '../utils/whatsapp';
 
@@ -43,9 +44,7 @@ export default function SubcategoryPage() {
   usePageMeta(
     sub
       ? {
-          title: `${sub.name} – ${category.shortName}`,
-          description: `${sub.description} ${category.name} from Ayudhayeluthu Electronics. Order easily on WhatsApp.`,
-          image: sub.image,
+          ...subcategoryMeta(category, sub),
           jsonLd: {
             '@context': 'https://schema.org',
             '@graph': [
@@ -54,7 +53,7 @@ export default function SubcategoryPage() {
                 ? [{
                     '@type': 'ItemList',
                     name: sub.name,
-                    itemListElement: items.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: absUrl(`/product/${encodeURIComponent(p.id)}`), name: p.name })),
+                    itemListElement: items.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: absUrl(canonicalPath(`/product/${encodeURIComponent(p.id)}`)), name: p.name })),
                   }]
                 : []),
             ],

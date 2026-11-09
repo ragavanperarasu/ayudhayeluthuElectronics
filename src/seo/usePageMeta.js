@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { SITE } from '../config';
+import { canonicalPath, clip, fullTitle } from './pageMeta';
 
 // Absolute URL (needed by Google / share previews) when SITE.siteUrl is set, otherwise a root path.
 export const absUrl = (path = '') => {
@@ -41,11 +42,6 @@ const setJsonLd = (data) => {
   el.textContent = JSON.stringify(data);
 };
 
-const clip = (text, max = 160) => {
-  const t = String(text || '').replace(/\s+/g, ' ').trim();
-  return t.length > max ? `${t.slice(0, max - 1).replace(/\s+\S*$/, '')}…` : t;
-};
-
 /**
  * Sets the page title, description, share-preview tags, canonical link and
  * structured data for the current page.
@@ -55,19 +51,19 @@ export default function usePageMeta({ title, description, image, noindex = false
   const jsonKey = jsonLd ? JSON.stringify(jsonLd) : '';
 
   useEffect(() => {
-    const fullTitle = title ? `${title} | ${SITE.name}` : SITE.seo.title;
+    const pageTitle = fullTitle(title);
     const desc = clip(description || SITE.seo.description);
-    const img = absUrl(image || SITE.seo.image);
-    const url = SITE.siteUrl ? absUrl(pathname) : '';
+    const img = /^https?:/.test(image || '') ? image : absUrl(image || SITE.seo.image);
+    const url = SITE.siteUrl ? absUrl(canonicalPath(pathname)) : '';
 
-    document.title = fullTitle;
+    document.title = pageTitle;
     setMeta('name', 'description', desc);
     setMeta('name', 'robots', noindex ? 'noindex, follow' : 'index, follow');
-    setMeta('property', 'og:title', fullTitle);
+    setMeta('property', 'og:title', pageTitle);
     setMeta('property', 'og:description', desc);
     setMeta('property', 'og:image', img);
     if (url) setMeta('property', 'og:url', url);
-    setMeta('name', 'twitter:title', fullTitle);
+    setMeta('name', 'twitter:title', pageTitle);
     setMeta('name', 'twitter:description', desc);
     setMeta('name', 'twitter:image', img);
     setCanonical(url);
@@ -82,6 +78,6 @@ export const breadcrumbLd = (crumbs) => ({
     '@type': 'ListItem',
     position: i + 1,
     name: c.label,
-    ...(c.to ? { item: absUrl(c.to) } : {}),
+    ...(c.to ? { item: absUrl(canonicalPath(c.to)) } : {}),
   })),
 });

@@ -56,7 +56,7 @@ export default function App() {
       {/* reducedMotion="user": calmer animations for visitors who turned on "reduce motion" */}
       <MotionConfig reducedMotion="user">
       <CartProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/+$/, '') || '/'}>
           <Routes>
             <Route element={<Layout />}>
               <Route index element={<HomePage />} />

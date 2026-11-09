@@ -17,6 +17,7 @@ import { discountPercent, formatPrice, hasPrice } from '../utils/format';
 import { openWhatsApp, productOrderMessage } from '../utils/whatsapp';
 import { useCart } from '../context/CartContext';
 import usePageMeta, { absUrl, breadcrumbLd } from '../seo/usePageMeta';
+import { canonicalPath, productMeta } from '../seo/pageMeta';
 
 export default function ProductPage() {
   const { productId } = useParams();
@@ -35,9 +36,7 @@ export default function ProductPage() {
   usePageMeta(
     p
       ? {
-          title: p.name,
-          description: p.shortDescription || p.description || `${p.name} from ${sub?.name || 'Ayudhayeluthu Electronics'}.`,
-          image: p.image,
+          ...productMeta(p, sub),
           jsonLd: {
             '@context': 'https://schema.org',
             '@graph': [
@@ -56,7 +55,7 @@ export default function ProductPage() {
                         price: p.price,
                         priceCurrency: 'INR',
                         availability: inStock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
-                        url: absUrl(`/product/${encodeURIComponent(p.id)}`),
+                        url: absUrl(canonicalPath(`/product/${encodeURIComponent(p.id)}`)),
                       },
                     }
                   : {}),

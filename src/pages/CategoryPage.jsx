@@ -7,6 +7,7 @@ import NotFoundPage from './NotFoundPage';
 import { findCategory } from '../data/categories';
 import { productsIn } from '../data/products';
 import usePageMeta, { breadcrumbLd } from '../seo/usePageMeta';
+import { categoryMeta } from '../seo/pageMeta';
 import { openWhatsApp, subcategoryRequestMessage } from '../utils/whatsapp';
 
 export default function CategoryPage() {
@@ -16,9 +17,7 @@ export default function CategoryPage() {
   usePageMeta(
     category
       ? {
-          title: category.name,
-          description: `${category.tagline} ${category.subcategories.map((s) => s.name).join(', ')}.`,
-          image: category.image,
+          ...categoryMeta(category),
           jsonLd: { '@context': 'https://schema.org', ...breadcrumbLd(crumbs) },
         }
       : { title: 'Page not found', noindex: true },

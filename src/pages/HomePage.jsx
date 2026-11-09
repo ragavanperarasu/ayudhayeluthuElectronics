@@ -6,9 +6,10 @@ import CategoryCard from '../components/CategoryCard';
 import HowToOrder from '../components/HowToOrder';
 import categories from '../data/categories';
 import usePageMeta from '../seo/usePageMeta';
+import { homeMeta } from '../seo/pageMeta';
 
 export default function HomePage() {
-  usePageMeta({});
+  usePageMeta(homeMeta());
   return (
     <>
       <Hero />

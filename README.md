@@ -33,19 +33,23 @@ npm run dev        # opens http://localhost:5173
 npm run build      # creates the static site in the dist/ folder
 ```
 
-Upload the contents of `dist/` to the **root of your domain**. Because pages have clean addresses (`/category/...`), the host must send every address to `index.html`. The rules for this are already included:
+### GitHub Pages (automatic)
 
-| Host | File (already in the build) |
-| --- | --- |
-| Netlify | `_redirects` |
-| Hostinger / cPanel / Apache | `.htaccess` (a hidden file; make sure it is uploaded) |
-| Vercel | `vercel.json` |
-| GitHub Pages | `404.html` |
+The site is published to **https://ragavanperarasu.github.io/ayudhayeluthuElectronics/** by GitHub Actions
+(`.github/workflows/deploy.yml`). Every push to the `main` branch builds and publishes it automatically.
+
+One-time setup: GitHub repo → **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+### Other hosts
+
+Upload the contents of `dist/`. Every page is built as its own `index.html`, so pages open directly on any static host.
+Set `siteUrl` in `src/config.js` to the new address first (the folder the site lives in is taken from it).
 
 ## SEO
 
-- **Set your domain** in `src/config.js` → `siteUrl: 'https://www.yourdomain.com'`, then run `npm run build` again. This turns on `sitemap.xml`, canonical links and full share-preview image links.
-- After the site is live, add it to [Google Search Console](https://search.google.com/search-console) and submit `https://www.yourdomain.com/sitemap.xml`.
+- The live address is `siteUrl` in `src/config.js`. It drives `sitemap.xml`, canonical links, share previews and the site folder.
+- Every page is built as a real HTML file with its own title, description and share-preview tags (Google and WhatsApp/Facebook read them without running JavaScript).
+- After the site is live, add it to [Google Search Console](https://search.google.com/search-console) as a **URL prefix** property (`https://ragavanperarasu.github.io/ayudhayeluthuElectronics/`) and submit `sitemap.xml`.
 - Home page title, description and keywords: `src/config.js` → `seo`.
 - Every page sets its own title, description, share preview and structured data (breadcrumbs, products with price) automatically from the category and product data.
 - Share preview picture (WhatsApp, Facebook, LinkedIn): `public/og-image.jpg` (1200×630).

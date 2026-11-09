@@ -5,10 +5,11 @@ export const SITE = {
   name: 'Ayudhayeluthu Electronics',
 
   // ── SEO ───────────────────────────────────────────────────
-  // Your live website address, e.g. 'https://www.yourdomain.com' (no "/" at the end).
-  // Needed for the Google sitemap, canonical links and WhatsApp/Facebook share previews.
-  // Leave '' until you have a domain — everything else still works.
-  siteUrl: '',
+  // Your live website address (no "/" at the end). The build uses it for the
+  // Google sitemap, canonical links, share previews AND the folder the site lives in.
+  //   GitHub Pages:   'https://ragavanperarasu.github.io/ayudhayeluthuElectronics'
+  //   Own domain:     'https://www.yourdomain.com'   (change this line when you get one)
+  siteUrl: 'https://ragavanperarasu.github.io/ayudhayeluthuElectronics',
   seo: {
     // Title and description Google shows for the home page
     title: 'Ayudhayeluthu Electronics | Ethical Hacking, Device Repair, Projects, Websites & Apps',
