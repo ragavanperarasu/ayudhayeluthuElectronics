@@ -4,6 +4,7 @@ import EmojiObjectsRoundedIcon from '@mui/icons-material/EmojiObjectsRounded';
 import CategoryRoundedIcon from '@mui/icons-material/CategoryRounded';
 import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
 import PhoneIphoneRoundedIcon from '@mui/icons-material/PhoneIphoneRounded';
+import DeveloperBoardRoundedIcon from '@mui/icons-material/DeveloperBoardRounded';
 
 const ICONS = {
   security: SecurityRoundedIcon,
@@ -11,6 +12,7 @@ const ICONS = {
   custom: EmojiObjectsRoundedIcon,
   web: LanguageRoundedIcon,
   app: PhoneIphoneRoundedIcon,
+  pcb: DeveloperBoardRoundedIcon,
 };
 
 export default function CategoryIcon({ name, ...props }) {

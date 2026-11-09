@@ -20,7 +20,7 @@ const showcase = [
 ].map((s) => ({ image: s.image, alt: s.alt || s.imageAlt, label: s.label }));
 
 // Phrases that rotate in the headline
-const PHRASES = ['ethical hacking tools', 'laptop & mobile repair', 'custom-built projects', 'websites & mobile apps'];
+const PHRASES = ['ethical hacking tools', 'laptop & mobile repair', 'custom-built projects', 'custom PCB design', 'websites & mobile apps'];
 
 // entrance animation for the left column, one element after another
 const column = { hidden: {}, show: { transition: { staggerChildren: 0.12, delayChildren: 0.15 } } };

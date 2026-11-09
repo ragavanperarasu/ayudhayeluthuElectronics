@@ -12,20 +12,21 @@ export const SITE = {
   siteUrl: 'https://ragavanperarasu.github.io/ayudhayeluthuElectronics',
   seo: {
     // Title and description Google shows for the home page
-    title: 'Ayudhayeluthu Electronics | Ethical Hacking, Device Repair, Projects, Websites & Apps',
+    title: 'Ayudhayeluthu Electronics | Ethical Hacking, Device Repair, PCB Design, Websites & Apps',
     description:
-      'Ethical hacking tools, laptop & mobile repair, school and college projects, website and mobile app development. Order easily on WhatsApp.',
+      'Ethical hacking tools, laptop & mobile repair, student projects, custom PCB design, websites and mobile apps. Order easily on WhatsApp.',
     keywords: [
       'ethical hacking products', 'cybersecurity tools', 'Wi-Fi testing tools', 'RFID NFC tools',
       'laptop service', 'mobile service', 'gadget repair', 'school projects', 'college projects',
-      'final year projects', 'prototype building', 'website development', 'e-commerce website',
+      'final year projects', 'prototype building', 'custom PCB design', 'PCB designing', 'single sided PCB', 'double sided PCB', 'multilayer PCB',
+      'PCB assembly', 'website development', 'e-commerce website',
       'mobile app development', 'Android app development', 'iOS app development', 'Ayudhayeluthu Electronics',
     ],
     // Picture shown when the site is shared on WhatsApp, Facebook, LinkedIn… (1200×630, in public/)
     image: 'og-image.jpg',
     locale: 'en_IN',
   },
-  tagline: 'Ethical hacking products, device service, custom projects, websites and mobile apps.',
+  tagline: 'Ethical hacking products, device service, custom projects, PCB design, websites and mobile apps.',
 
   // WhatsApp number with country code, digits only (no +, spaces or dashes)
   whatsappNumber: '916385646698',
@@ -33,7 +34,7 @@ export const SITE = {
   currency: '₹',
 
   // Short points shown in the hero section
-  highlights: ['Ethical hacking tools', 'Laptop, mobile & gadget service', 'School, college & prototype projects', 'Websites & mobile apps'],
+  highlights: ['Ethical hacking tools', 'Laptop, mobile & gadget service', 'School, college & prototype projects', 'Custom PCB design', 'Websites & mobile apps'],
 
   // ── ABOUT ME section ──────────────────────────────────────
   owner: {
@@ -45,8 +46,8 @@ export const SITE = {
     linkedin: 'https://www.linkedin.com/in/perarasu-m-766376362',
     // Each line below is one paragraph — edit freely
     about: [
-      "Hi, I'm Perarasu, the founder of Ayudhayeluthu Electronics. I work across ethical hacking products, electronic device service, custom-built projects, websites and mobile apps.",
-      'I supply tools and kits for learning cybersecurity, service laptops, mobiles and tech gadgets, build custom school projects, college projects and prototypes, and develop websites and mobile apps made to your requirement.',
+      "Hi, I'm Perarasu, the founder of Ayudhayeluthu Electronics. I work across ethical hacking products, electronic device service, custom-built projects, PCB design, websites and mobile apps.",
+      'I supply tools and kits for learning cybersecurity, service laptops, mobiles and tech gadgets, build custom school projects, college projects and prototypes, design custom PCBs, and develop websites and mobile apps made to your requirement.',
       'Every order and enquiry is handled personally, so you always talk directly to me.',
     ],
   },
@@ -67,6 +68,11 @@ export const SITE = {
       icon: 'custom',
       title: 'Custom products',
       text: 'School projects, college projects and prototypes built to your requirement.',
+    },
+    {
+      icon: 'pcb',
+      title: 'Custom PCB design',
+      text: 'Single-sided, double-sided and multilayer PCB design, plus assembly.',
     },
     {
       icon: 'web',

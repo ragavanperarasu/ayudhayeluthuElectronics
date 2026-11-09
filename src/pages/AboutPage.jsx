@@ -11,7 +11,7 @@ export default function AboutPage() {
       <PageBanner
         crumbs={[{ label: 'Home', to: '/' }, { label: 'About' }]}
         title="About Ayudhayeluthu Electronics"
-        description="Ethical hacking products, device service, custom projects, websites and mobile apps, handled personally."
+        description="Ethical hacking products, device service, custom projects, PCB design, websites and mobile apps, handled personally."
       />
       <About />
       <HowToOrder />

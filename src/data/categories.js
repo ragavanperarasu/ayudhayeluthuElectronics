@@ -127,6 +127,47 @@ const categories = [
     ],
   },
   {
+    id: 'pcb-design',
+    name: 'Custom PCB Design',
+    shortName: 'PCB Design',
+    icon: 'pcb',
+    image: 'images/categories/custom-pcb-design.jpg',
+    imageAlt: 'PCB layout design with copper traces on both layers',
+    tagline: 'Single-sided, double-sided and multilayer PCBs designed to your circuit.',
+    description:
+      'Send us your circuit or idea and we design the schematic and PCB layout, prepare Gerber files and help you get boards made and assembled.',
+    subcategories: [
+      {
+        id: 'single-sided-pcb',
+        name: 'Single-Sided PCB',
+        image: 'images/categories/single-sided-pcb.jpg',
+        imageAlt: 'Single-sided PCB with through-hole components',
+        description: 'Copper on one side: low-cost boards for simple circuits and student projects.',
+      },
+      {
+        id: 'double-sided-pcb',
+        name: 'Double-Sided PCB',
+        image: 'images/categories/double-sided-pcb.jpg',
+        imageAlt: 'Green double-sided PCB with traces and plated vias',
+        description: 'Copper on both sides with plated vias for compact, more complex circuits.',
+      },
+      {
+        id: 'multilayer-pcb',
+        name: 'Multilayer PCB',
+        image: 'images/categories/multilayer-pcb.jpg',
+        imageAlt: 'High-density multilayer PCB with a microcontroller chip',
+        description: '4 or more layers for high-density, high-speed and microcontroller designs.',
+      },
+      {
+        id: 'pcb-assembly',
+        name: 'PCB Assembly',
+        image: 'images/categories/pcb-assembly.jpg',
+        imageAlt: 'Assembled PCB populated with electronic components',
+        description: 'Soldering of SMD and through-hole components on your boards, tested and ready to use.',
+      },
+    ],
+  },
+  {
     id: 'website-development',
     name: 'Website Development',
     shortName: 'Websites',

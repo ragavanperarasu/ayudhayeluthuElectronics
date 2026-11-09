@@ -27,3 +27,8 @@ They were cropped and resized to 1000×750.
 | android-app-development.jpg | CC0 | https://www.flickr.com/photos/12375388@N08/31083977126 |
 | ios-app-development.jpg | CC0 | https://www.flickr.com/photos/135396164@N05/31303563276 |
 | cross-platform-app-development.jpg | CC0 | https://www.flickr.com/photos/135396164@N05/30302883830 |
+| custom-pcb-design.jpg | Public Domain Mark | https://www.flickr.com/photos/47132899@N00/3818379983 |
+| single-sided-pcb.jpg | CC0 | https://commons.wikimedia.org/w/index.php?curid=152121784 |
+| double-sided-pcb.jpg | CC0 | https://www.rawpixel.com/image/6028530/photo-image-public-domain-technology-lines |
+| multilayer-pcb.jpg | CC0 | https://www.rawpixel.com/image/5966842/computer-circuit-board-macro |
+| pcb-assembly.jpg | CC0 | https://commons.wikimedia.org/w/index.php?curid=113851771 |

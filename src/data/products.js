@@ -23,11 +23,12 @@
 //    specs: { Chipset: 'Example', Interface: 'USB 3.0' },
 //  },
 //
-//  Category ids:      ethical-hacking, device-service, custom-projects,
+//  Category ids:      ethical-hacking, device-service, custom-projects, pcb-design,
 //                     website-development, mobile-app-development
 //  Sub-category ids:  wifi-network, usb-hid, rfid-nfc, learning-kits,
 //                     laptop-service, mobile-service, gadget-service,
 //                     school-projects, college-projects, prototype-building,
+//                     single-sided-pcb, double-sided-pcb, multilayer-pcb, pcb-assembly,
 //                     business-websites, ecommerce-websites, portfolio-websites,
 //                     android-apps, ios-apps, cross-platform-apps
 // ─────────────────────────────────────────────────────────────

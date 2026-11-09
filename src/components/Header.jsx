@@ -48,7 +48,7 @@ export default function Header({ onCartClick }) {
           </IconButton>
           <Logo />
           <Box sx={{ flexGrow: 1 }} />
-          <Stack direction="row" spacing={0.25} sx={{ display: { xs: 'none', lg: 'flex' } }}>
+          <Stack direction="row" spacing={0} sx={{ display: { xs: 'none', lg: 'flex' } }}>
             {links.map((l) => (
               <Button
                 key={l.to}
@@ -58,6 +58,10 @@ export default function Header({ onCartClick }) {
                 color="inherit"
                 sx={{
                   fontWeight: 700,
+                  fontSize: 15,
+                  whiteSpace: 'nowrap', // keep every label on one line
+                  minWidth: 0,
+                  px: 1.25,
                   color: 'text.secondary',
                   '&.active': { color: 'primary.main', bgcolor: 'rgba(37,99,235,.08)' },
                 }}

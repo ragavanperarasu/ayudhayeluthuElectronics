@@ -5,6 +5,7 @@ Static website built with **React + Material UI (Vite)** and **React Router**.
 - **Ethical Hacking Products**: Wi-Fi & network testing, USB & HID tools, RFID & NFC tools, learning kits
 - **Electronic Device Service**: laptop, mobile and tech gadget service
 - **Custom Product Creation**: school projects, college projects, prototype building
+- **Custom PCB Design**: single-sided, double-sided, multilayer PCB, PCB assembly
 - **Website Development**: business websites, e-commerce websites, portfolio & personal websites
 - **Mobile App Development**: Android apps, iOS apps, cross-platform apps
 
@@ -14,7 +15,7 @@ Customers order on **WhatsApp**. WhatsApp opens only from the order buttons, wit
 
 | Address | Page |
 | --- | --- |
-| `/` | Home: the 5 main categories |
+| `/` | Home: the 6 main categories |
 | `/category/ethical-hacking` | A main category: its sub-categories |
 | `/category/ethical-hacking/wifi-network` | A sub-category: its products (shows "Items coming soon" while empty) |
 | `/product/AYE-001` | A single product's details |
@@ -59,7 +60,7 @@ Set `siteUrl` in `src/config.js` to the new address first (the folder the site l
 
 Open **`src/data/products.js`**. It starts empty and has a ready-to-copy example at the top. Each product needs:
 
-- `category`: the main category id (`ethical-hacking`, `device-service`, `custom-projects`, `website-development`, `mobile-app-development`)
+- `category`: the main category id (`ethical-hacking`, `device-service`, `custom-projects`, `pcb-design`, `website-development`, `mobile-app-development`)
 - `subcategory`: the sub-category id (listed at the top of the file)
 
 `price` is optional. Leave it out and the site shows **"Price on request"** (useful for repair services and custom projects).

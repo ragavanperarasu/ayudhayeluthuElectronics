@@ -15,7 +15,7 @@ export const homeMeta = () => ({ title: '', description: SITE.seo.description, i
 
 export const aboutMeta = () => ({
   title: `About ${SITE.owner.name} – Founder`,
-  description: `Meet ${SITE.owner.name}, founder of ${SITE.name}: ethical hacking products, device service, custom projects, websites and mobile apps.`,
+  description: `Meet ${SITE.owner.name}, founder of ${SITE.name}: ethical hacking products, device service, custom projects, PCB design, websites and mobile apps.`,
   image: SITE.owner.photo,
 });
 
