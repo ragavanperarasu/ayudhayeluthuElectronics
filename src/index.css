@@ -1,0 +1,25 @@
+html { scroll-behavior: smooth; }
+body { margin: 0; -webkit-font-smoothing: antialiased; }
+section[id] { scroll-margin-top: 80px; }
+img { max-width: 100%; display: block; }
+
+
+/* moving gradient for the rotating hero phrase */
+@keyframes shimmer {
+  from { background-position: 0% 50%; }
+  to { background-position: 200% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; scroll-behavior: auto !important; }
+}
+
+/* rotating colour ring around the About photo */
+@property --ring-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes ring-spin {
+  to { --ring-angle: 360deg; }
+}
